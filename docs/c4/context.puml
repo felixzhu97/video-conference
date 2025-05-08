@@ -1,0 +1,10 @@
+@startuml C4ContextDiagram
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title 系统上下文图
+
+Person(用户, "用户", "使用视频会议系统的用户")
+System(video_conf, "视频会议系统", "提供多人视频会议功能")
+
+Rel(用户, video_conf, "使用", "Web浏览器/移动端")
+@enduml

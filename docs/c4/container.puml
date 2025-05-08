@@ -1,0 +1,17 @@
+@startuml C4ContainerDiagram
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title 容器图
+
+Person(用户, "用户", "使用视频会议系统的用户")
+
+System_Boundary(c1, "视频会议系统") {
+    Container(spa, "前端应用", "Next.js", "提供用户界面")
+    Container(api, "API服务", "Node.js", "处理业务逻辑")
+    Container(db, "数据库", "PostgreSQL", "存储用户和会议数据")
+}
+
+Rel(用户, spa, "使用", "HTTP/HTTPS")
+Rel(spa, api, "调用", "REST API")
+Rel(api, db, "读写", "SQL")
+@enduml

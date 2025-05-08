@@ -1,0 +1,16 @@
+@startuml C4ComponentDiagram
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title 组件图
+
+Container(spa, "前端应用", "Next.js", "提供用户界面")
+
+Container_Boundary(spa_boundary, "前端应用") {
+    Component(home_page, "首页组件", "React", "显示会议列表")
+    Component(meeting_page, "会议组件", "React", "视频会议界面")
+    Component(auth, "认证组件", "React", "处理用户登录")
+}
+
+Rel(home_page, meeting_page, "导航到", "React Router")
+Rel(auth, home_page, "验证后跳转", "JWT")
+@enduml

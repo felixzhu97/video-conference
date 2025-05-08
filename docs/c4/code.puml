@@ -1,0 +1,16 @@
+@startuml C4CodeDiagram
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title 代码图
+
+Component(meeting_page, "会议组件", "React", "视频会议界面")
+
+Boundary(meeting_boundary, "会议组件") {
+    Component(video_player, "视频播放器", "React", "显示视频流")
+    Component(controls, "控制栏", "React", "提供会议控制")
+    Component(chat, "聊天组件", "React", "处理文字聊天")
+}
+
+Rel(video_player, controls, "接收控制指令", "事件")
+Rel(controls, chat, "切换显示", "状态管理")
+@enduml
