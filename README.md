@@ -66,4 +66,12 @@ npm run dev
 
 ## 贡献指南
 
-欢迎提交 Pull Request。请确保代码风格一致并通过所有测试。
+See [CONTRIBUTING.md](CONTRIBUTING.md). 欢迎提交 Pull Request。请确保代码风格一致并通过所有测试。Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Security
+
+Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
+
+## License
+
+[MIT](LICENSE) © 2026 Felix
